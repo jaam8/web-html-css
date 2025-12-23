@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Coffee blog</title>
+    <style>
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        align-items: stretch;
+        max-width: 520px;
+    }
+    .form-row {
+        display: flex;
+        gap: 12px;
+        align-items: flex-start;
+    }
+    .form-row > label,
+    .form-row > .label {
+        min-width: 170px;
+        text-align: right;
+        font-weight: 700;
+    }
+    .form-row .control {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        align-items: flex-start;
+    }
+    form button {
+        align-self: flex-start;
+    }
+    </style>
+</head>
+<body>
+    <form>
+        <h1>Coffee blog</h1>
+        <div class="form-row">
+            <label for="title">Название напитка</label>
+            <input id="title" name="title" type="text" placeholder="Американо">
+        </div>
+        <div class="form-row">
+            <label for="sort">Сорт кофе</label>
+            <select id="sort" name="sort">
+                <option value="">Выберите сорт</option>
+                <option value="Арабика">Арабика</option>
+                <option value="Робуста">Робуста</option>
+                <option value="Гватемала" selected>Гватемала</option>
+            </select>
+        </div>
+        <div class="form-row">
+            <span class="label">Крепость обжарки</span>
+            <div class="control">
+                <label><input type="radio" name="strong" value="Крепкая">Крепкая</label>
+                <label><input type="radio" name="strong" value="Средняя" checked>Средняя</label>
+                <label><input type="radio" name="strong" value="Легкая">Легкая</label>
+            </div>
+        </div>
+        <div class="form-row">
+            <label for="image">Изображение</label>
+            <input id="image" name="image" type="url" placeholder="http://site.com/img.png">
+        </div>
+        <div class="form-row">
+            <label for="cost">Стоимость напитка</label>
+            <input id="cost" name="cost" type="number" placeholder="100">
+        </div>
+        <div class="form-row">
+            <label for="description">Описание</label>
+            <textarea id="description" name="description" placeholder="Немного про напиток"></textarea>
+        </div>
+        <div class="form-row">
+            <span class="label"></span>
+            <button type="submit">Добавить напиток</button>
+        </div>
+    </form>
+    <br>
+    <table id="table" border="1" cellspacing="0" cellpadding="5">
+        <tr>
+            <th>Изображение</th>
+            <th>Название</th>
+            <th>Сорт</th>
+            <th>Крепость обжарки</th>
+            <th>Стоимость</th>
+            <th>Описание</th>
+        </tr>
+    </table>
+    <script src="https://queen-leksa.github.io/111/script.js"></script>
+</body>
+</html>
